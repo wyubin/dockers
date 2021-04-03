@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  nginx_flask:
+    image: yubin0611/nginx_flask:python2
+    container_name: nginx_iis
+    ports:
+      - "8080:80"
+    volumes:
+      - /tmp:/tmp
+      - /home/yubin/builds/mygit/dockers/nginx_flask_python2/uwsgi:/uwsgi
+    command: /usr/bin/supervisord -c /settings/supervisord.conf

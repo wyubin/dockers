@@ -1,0 +1,1 @@
+docker build . -t yubin0611/nginx_flask:python2
