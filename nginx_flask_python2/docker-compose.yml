@@ -9,6 +9,7 @@ services:
       - /tmp:/tmp
       # mount flask project to /uwsgi/project
       # - /home/yubin/project/coral_pdltte:/uwsgi/project/coral_pdltte
+      # - /home/yubin/project/python:/uwsgi/project/python
       # mount global static to /uwsgi/static
       # - /home/yubin/static:/uwsgi/static
     command: /usr/bin/supervisord -c /settings/supervisord.conf

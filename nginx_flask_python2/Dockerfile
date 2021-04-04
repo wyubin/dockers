@@ -1,10 +1,10 @@
 FROM alpine:3.4
 RUN apk update && \
   apk add --no-cache -U nginx supervisor python py-pip sqlite \
-  ## for uwsgi
-  libc-dev gcc linux-headers python-dev
+  ## for python packages
+  libc-dev gcc linux-headers python-dev geoip-dev
 ## python packages
-RUN pip install -U flask uwsgi
+RUN pip install -U flask uwsgi peewee GeoIP validate_email biopython==1.76 numpy==1.16.1
 
 ## copy src
 COPY settings /settings
