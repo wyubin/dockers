@@ -9,6 +9,7 @@ RUN pip install -U flask uwsgi
 ## copy src
 COPY settings /settings
 COPY nginx /nginx
+COPY uwsgi /uwsgi
 
 ## prepare env
 RUN ln -fs /nginx/default.conf /etc/nginx/conf.d/default.conf &&\

@@ -1,3 +1,4 @@
 **/archive
 **/*.v[0-9]*
 dockers.wiki
+*.pyc

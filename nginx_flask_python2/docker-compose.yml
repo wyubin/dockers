@@ -4,8 +4,11 @@ services:
     image: yubin0611/nginx_flask:python2
     container_name: nginx_iis
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - /tmp:/tmp
-      - /home/yubin/builds/mygit/dockers/nginx_flask_python2/uwsgi:/uwsgi
+      # mount flask project to /uwsgi/project
+      # - /home/yubin/project/coral_pdltte:/uwsgi/project/coral_pdltte
+      # mount global static to /uwsgi/static
+      # - /home/yubin/static:/uwsgi/static
     command: /usr/bin/supervisord -c /settings/supervisord.conf
