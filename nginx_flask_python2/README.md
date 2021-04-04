@@ -4,6 +4,9 @@
 *  image 不要太大
 
 # 開啟 container
+*  需要先設定 docker-compose.yml
+  *  將需要放進來的flask project 掛在 /uwsgi/project/[project_name]
+  *  將純static 資料夾放在 /uwsgi/static
 *  直接從建好的 image 開一個 container 來用
 ```shell
 ## in dir nginx_flask_python2
