@@ -1,0 +1,14 @@
+{
+	"name" : "biotool",
+	"version" : "0.0.1",
+	"style":{
+		"app.min.css":[
+			"../../../nodejs/lib/navi_bar.scss",
+			"theme.scss",
+			"../../../nodejs/static/myform/myform.scss"
+		]
+	},
+	"browser":{
+		"app.min.js":"app.js"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"daemon_path":"jobs_daemon.py",
+	"doc_path":"static/doc/jobs/",
+	"db_path":"db_dir/jobs.sqlite",
+	"type2args":{
+		"mscan":{
+			"jar":"/home/wyubin/MSGFPlus/MSGFPlus.jar",
+			"db_path":"db_dir/mscan/"
+		}
+	},
+	"type2info":{
+		"mscan":{
+			"job_name":"MS-SCAN",
+			"job_url":"static/html/?guid=%(guid)s#mscan"
+		}
+	},
+	"mail_tmpl":"static/html/jobs_tmpl/",
+	"mail_info":{
+		"title":"RNA-Seq job reminder",
+		"project_name":""
+	},
+	"mail_list":{
+		"To":[],
+		"CC":[],
+		"BCC":[]
+	}
+}

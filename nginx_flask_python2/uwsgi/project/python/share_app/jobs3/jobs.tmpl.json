@@ -1,0 +1,30 @@
+{
+	"daemon_path":"jobs_daemon.py",
+	"doc_path":"static/doc/jobs/",
+	"db_path":"db/jobs.sqlite",
+	"mod_path":"/home/wyubin/project/python/share_app/jobs3/",
+	"type2args":{
+		"mscan":{
+			"jar":"/home/wyubin/MSGFPlus/MSGFPlus.jar",
+			"db_path":"db/mscan/",
+			"mod_dir":"/home/wyubin/project/python/share_app/jobs3/job_types/mscan_mod/"
+		}
+	},
+	"type2info":{
+		"mscan":{
+			"job_name":"MS-SCAN",
+			"job_url":"static/html/?guid=%(guid)s#mscan"
+		}
+	},
+	"mail_tmpl":"../python/share_app/jobs3/mail_html/",
+	"mail_info":{
+		"title":"MS-SCAN job reminder",
+		"project_name":"MS-SCAN",
+		"project_path":"static/html/"
+	},
+	"mail_list":{
+		"To":[],
+		"CC":[],
+		"BCC":["yubin0611@gmail.com"]
+	}
+}

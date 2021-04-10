@@ -1,0 +1,33 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="ms_scan.tool.min.css">
+</head>
+<body>
+	<p>Load ms json output from this<input id="f_ms_json" type="file" draggable="true"></input></p>
+	<div class="result"></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="ms_scan.core.min.js"></script>
+<script>
+var dom={},view={},var_o={};
+for(var i in {'f_ms_json':1}){
+	dom[i] = document.querySelector('#'+i);
+}
+var tool={
+	my_ajax:new my_ajax()
+};
+view.result = new msscan_res_view(document.querySelector('div.result'),{tool:tool});
+
+tool.f_ms_json_setup = function(){
+	var fdom = new FileReader();
+	fdom.file_dom_setup(dom.f_ms_json);
+	fdom.onload = function(e){
+		var_o.data = JSON.parse(e.target.result);
+		view.result.render(var_o.data);
+	}
+}
+window.onload = function(){
+	tool.f_ms_json_setup();
+}
+</script>
+</body>
+</html>

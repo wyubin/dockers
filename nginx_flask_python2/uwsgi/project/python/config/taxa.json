@@ -1,0 +1,5 @@
+{
+	"db_path":"db/taxa_lvdb",
+	"job_path":"static/doc/krona/",
+	"script":"util/krona/scripts/ImportText.pl"
+}

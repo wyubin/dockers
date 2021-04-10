@@ -1,0 +1,20 @@
+{
+	"titles":{
+		"notify":"Coral-trans-dbase contact information: Thanks for your message"
+	},
+	"mail_list":{
+		"To":[],
+		"CC":[],
+		"BCC":["yubin0611@gmail.com"]
+	},
+	"mail_info":{
+		"project_name":"Coral-trans-dbase"
+	},
+	"mail_tmpl":"static/html/contact_tmpl/",
+	"db_path":"db/contact.sqlite",
+	"q_types":[
+		"Biological issue",
+		"Bioinformatic problem",
+		"Website error"
+	]
+}

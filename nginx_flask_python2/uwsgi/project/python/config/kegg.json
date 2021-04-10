@@ -1,0 +1,4 @@
+{
+	"db_path":"db/kegg_lvdb",
+	"fmt_map":"http://symbiont.iis.sinica.edu.tw/python/static/kegg_map/%s.png"
+}

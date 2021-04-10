@@ -1,0 +1,19 @@
+{
+	"js_minify":{
+		"ms_scan.core.min.js":[
+			"../msscan_res_view.js",
+			"../../../../static/js/mytable.jquery.js",
+			"../../../../static/js/stdlib.array.js",
+			"../../../../static/js/stdlib.Array.range.js",
+			"../../../../static/js/stdlib.Array.stat.js",
+			"../../../../static/js/stdlib.HTMLElement.js",
+			"../../../../static/js/my_ajax.js",
+			"../../../../static/js/stdlib.FileReader.js"
+		]
+	},
+	"css_minify":{
+		"ms_scan.tool.min.css":[
+			"../../../../static/css/jquery.mytable.scss.css"
+		]
+	}
+}

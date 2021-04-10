@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>{{config.base.title}}</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="../js/index.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/index.bundle.min.css" >
+</head>
+<body>
+	<dvi name="container">
+	<header><nav></nav></header>
+	<main>
+		{% for i in config.base.pages %}
+			<div id="{{ i }}" style="display:none">{% include i+'.html' ignore missing %}</div>
+		{% endfor %}
+	</main>
+	<footer align="center">
+	</footer>
+	</dvi>
+<script>
+var model = new Object(),tools=new Object();
+tools.var_g = {{ config.base }};
+model.nav = new mynav($('nav'),tools.var_g.nav);
+model.footer = new myfooter($('footer'),tools.var_g.footer);
+
+var Router = new Router({m_uri:new uri_sw()});
+for(var i=0;i<tools.var_g.pages.length;i++){
+	var t_id = tools.var_g.pages[i];
+	model[t_id] = eval('new model_'+t_id+'(document.getElementById(\''+t_id+'\'),tools)');
+	Router.add(eval('/^'+t_id+'$/'),function(data){model[data.match[0]].render(data.query);});
+}
+Router.before_route = function(uri){
+	uri.hash = uri.hash || 'home';
+	model.nav.active(uri.hash);
+	for(var i in model.nav.jq.tabs){
+		model[i].jq.body[0].style.display = (i== uri.hash) ? 'inline-block':'none';
+	}
+}
+model.nav.click_handler = function(tab_name){
+	Router.run({hash:tab_name});
+}
+window.onload = function(){
+	Router.run();
+}
+</script>
+</body>
+</html>

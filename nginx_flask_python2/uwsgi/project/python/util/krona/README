@@ -1,0 +1,7 @@
+# revise lib source in ImportText.pl
+use FindBin qw($Bin);
+use lib "$Bin/../lib";
+
+# revise Global constants in lib/KronaTools.pm
+use File::Basename;
+my $libPath = dirname(__FILE__);

@@ -1,0 +1,2 @@
+H7C7N,C,fix,any,Pyridylethyl 		# Fixed Pyridylethyl
+O1,W,opt,any,Oxidation				# Oxidation W

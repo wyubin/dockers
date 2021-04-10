@@ -1,0 +1,50 @@
+[dna]
+#DNA: highlight nucleotide types
+#symbols =>  color                #comment
+*        ->  dark-gray            #mismatch
+?        ->  light-gray           #unknown
+Aa       =>  bright-red          #purine
+Bb       =>  dark-gray            #C or G or T; not A
+Cc       =>  bright-green            #pyrimidine
+Dd       =>  dark-gray            #A or G or T; not C
+Gg       =>  yellow          #purine
+Hh       =>  dark-gray            #A or C or T; not G
+Kk       =>  dark-gray            #G or T
+Mm       =>  dark-gray            #A or C
+Nn       =>  dark-gray            #A or C or G or T
+Rr       =>  dark-gray            #A or G
+Ss       =>  dark-gray            #C or G
+Tt       =>  bright-blue            #pyrimidine
+Uu       =>  bright-blue            #pyrimidine
+Vv       =>  dark-gray            #A or C or G; not T
+Ww       =>  dark-gray            #A or T
+Xx       ->  dark-gray            #any
+Yy       =>  dark-gray            #C or T
+[protein]
+#Protein: highlight amino acid physicochemical properties
+#symbols =>  color                #comment
+*        ->  dark-gray            #mismatch
+?        ->  light-gray           #unknown
+Aa       =>  bright-green         #hydrophobic
+Bb       =>  dark-gray            #D or N
+Cc       =>  yellow               #cysteine
+Dd       =>  bright-blue          #negative charge
+Ee       =>  bright-blue          #negative charge
+Ff       =>  dark-green           #large hydrophobic
+Gg       =>  bright-green         #hydrophobic
+Hh       =>  dark-green           #large hydrophobic
+Ii       =>  bright-green         #hydrophobic
+Kk       =>  bright-red           #positive charge
+Ll       =>  bright-green         #hydrophobic
+Mm       =>  bright-green         #hydrophobic
+Nn       =>  purple               #polar
+Pp       =>  bright-green         #hydrophobic
+Qq       =>  purple               #polar
+Rr       =>  bright-red           #positive charge
+Ss       =>  dull-blue            #small alcohol
+Tt       =>  dull-blue            #small alcohol
+Vv       =>  bright-green         #hydrophobic
+Ww       =>  dark-green           #large hydrophobic
+Xx       ->  dark-gray            #any
+Yy       =>  dark-green           #large hydrophobic
+Zz       =>  dark-gray            #E or Q

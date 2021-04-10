@@ -1,0 +1,14 @@
+<html>
+	<head></head>
+	<body>
+		<p>Dear user,</p>
+		<p>Your "{{ job_name }}" job has been completed.
+			 Please check the results by clicking on the link:
+			 <a href="{{index_url}}/{{job_url % {'guid':guid}}}">
+				 job id:{{guid}}
+			 </a>.</p>
+		<br/>
+		system reminder of
+		<a href="{{index_url}}/{{project_path}}">{{project_name}}</a>.
+	</body>
+</html>

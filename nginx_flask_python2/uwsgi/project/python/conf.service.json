@@ -1,0 +1,13 @@
+{
+	"scheme":"http",
+	"domain":"symbiont.iis.sinica.edu.tw",
+	"path":{
+		"mview_html":"/python/alignment/mview_html/",
+		"taxa_lv":"/python/taxa/lineage/",
+		"taxa_line":"/python/taxa/lineage_id/",
+		"taxa_krona":"/python/taxa/krona/",
+		"taxa_check":"/python/taxa/check/",
+		"kegg_enrich":"/python/kegg/enrich_info/",
+		"go_extype":"/python/go/ex_type/"
+	}
+}

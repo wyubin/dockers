@@ -1,0 +1,32 @@
+{
+	"pw":"mammer",
+	"states":["update","replace","cancel","restore"],
+	"state_need":{
+		"update":"init",
+		"replace":"update",
+		"cancel":"update",
+		"restore":"init"
+	},
+	"dir":"static/doc/db_updator/",
+	"mod":{
+		"tmp":"static/doc/db_updator/tmp/",
+		"ref":"static/doc/db_updator/ref/",
+		"new_db":"static/doc/db_updator/app.db",
+		"real_db":"static/doc/db_updator/tmp/app.db",
+		"sql_conf":"static/doc/db_updator/sql_conf.json",
+		"setup_conf":"static/doc/db_updator/setup_conf.json"
+	},
+	"mail":{
+		"list":{
+			"To":["wyubin@iis.sinica.edu.tw"],
+			"CC":[],
+			"BCC":["yubin0611@gmail.com"]
+		},
+		"info":{
+			"title":"EVIDENCE database update massage"
+		},
+		"tmpl":"static/doc/db_updator/mail_html/"
+	},
+	"url":"static/html/db_update.html",
+	"daemon":"./daemon_db_updator.py"
+}
