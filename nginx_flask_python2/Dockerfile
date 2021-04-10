@@ -2,14 +2,14 @@ FROM alpine:3.4
 RUN apk update && \
   apk add --no-cache -U nginx supervisor python py-pip sqlite \
   ## for geoip
-  geoip-dev \
+  #geoip-dev \
   ## for python packages
   libc-dev gcc linux-headers python-dev
   
 ## python packages
 RUN pip install -U \
   ## for geoip
-  GeoIP \
+  #GeoIP \
   ## other package
   flask uwsgi peewee  validate_email biopython==1.76 numpy==1.16.1
 
