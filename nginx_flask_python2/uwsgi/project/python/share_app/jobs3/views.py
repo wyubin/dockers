@@ -23,7 +23,8 @@ class job_handler():
 	"""offer a interface to treat web job
 	"""
 	def __init__(self):
-
+		self.version = 'test'
+	
 	def create_job(self,req):
 		"create job by input request"
 		t_guid = req.form.get('guid','')
