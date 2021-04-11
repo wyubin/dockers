@@ -3,15 +3,19 @@ RUN apk update && \
   apk add --no-cache -U nginx supervisor python py-pip sqlite \
   ## for geoip
   #geoip-dev \
+  ## for leveldb
+  #g++ \
   ## for python packages
-  libc-dev gcc g++ linux-headers python-dev
+  libc-dev gcc linux-headers python-dev
   
 ## python packages
 RUN pip install -U \
   ## for geoip
   #GeoIP \
+  ## for geoip
+  #plyvel \
   ## other package
-  flask uwsgi peewee==2.10.2 validate_email biopython==1.76 numpy==1.16.1 plyvel
+  flask uwsgi peewee==2.10.2 validate_email biopython==1.76 numpy==1.16.1
 
 ## copy src
 COPY settings /settings
