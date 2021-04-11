@@ -4,7 +4,7 @@ RUN apk update && \
   ## for geoip
   #geoip-dev \
   ## for python packages
-  libc-dev gcc linux-headers python-dev
+  libc-dev gcc g++ linux-headers python-dev
   
 ## python packages
 RUN pip install -U \
