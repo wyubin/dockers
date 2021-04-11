@@ -1,5 +1,4 @@
 import os,sys
-import GeoIP
 from jinja2 import Environment, FileSystemLoader
 from peewee import SqliteDatabase
 from flask import g
@@ -23,7 +22,6 @@ class quest_handler():
 	"""offer a interface to treat web job
 	"""
 	def __init__(self):
-		self.gi = GeoIP.new(GeoIP.GEOIP_MEMORY_CACHE)
 		self.m_conf = app_conf()
 
 	def add(self,info):
@@ -40,7 +38,7 @@ class quest_handler():
 		if t_sql.count():
 			return t_sql[0]
 		else:
-			return Ip.create(addr=ip_addr,country=self.gi.country_code_by_name(ip_addr))
+			return Ip.create(addr=ip_addr,country='default')
 
 	def _mail_check(self,mail_addr):
 		"check mail exist or not and return mail object"

@@ -4,7 +4,6 @@ from models import db_proxy,Job,Job_type,Ip,Mail
 from datetime import datetime
 from peewee import SqliteDatabase
 from jinja2 import Environment, FileSystemLoader
-import GeoIP
 from share_util import guid, mail_handler
 import job_types
 from app import sys_conf
@@ -23,7 +22,7 @@ class job_handler():
 	"""offer a interface to treat web job
 	"""
 	def __init__(self):
-		self.gi = GeoIP.new(GeoIP.GEOIP_MEMORY_CACHE)
+		self.version='test'
 	def add_by_info(self,info_o):
 		"save a job from request"
 		# check info_o in db or not
@@ -52,7 +51,7 @@ class job_handler():
 		if t_sql.count():
 			return t_sql[0]
 		else:
-			return Ip.create(addr=ip_addr,country=self.gi.country_code_by_name(ip_addr))
+			return Ip.create(addr=ip_addr,country='default')
 
 	def _mail_check(self,mail_addr):
 		"check mail exist or not and return mail object"

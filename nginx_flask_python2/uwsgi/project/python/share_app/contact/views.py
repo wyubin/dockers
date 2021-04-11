@@ -1,7 +1,6 @@
 import json,os
 from models import Qtype,Ip,Mail,Question
 from datetime import datetime
-import GeoIP
 from share_util import mail_handler
 from jinja2 import Environment, FileSystemLoader
 from config import contact as app_conf
@@ -11,7 +10,7 @@ class quest_handler():
 	"""offer a interface to treat web job
 	"""
 	def __init__(self):
-		self.gi = GeoIP.new(GeoIP.GEOIP_MEMORY_CACHE)
+		self.version = 'test'
 	
 	def add(self,info):
 		"save from request"
@@ -27,7 +26,7 @@ class quest_handler():
 		if t_sql.count():
 			return t_sql[0]
 		else:
-			return Ip.create(addr=ip_addr,country=self.gi.country_code_by_name(ip_addr))
+			return Ip.create(addr=ip_addr,country='default')
 	
 	def _mail_check(self,mail_addr):
 		"check mail exist or not and return mail object"

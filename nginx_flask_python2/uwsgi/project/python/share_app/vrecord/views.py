@@ -1,5 +1,5 @@
 "check visit type and "
-import os,sys,GeoIP
+import os,sys
 from peewee import SqliteDatabase
 from datetime import date
 from models import db_proxy,Vdate,Vtype,Ip,Record
@@ -19,7 +19,7 @@ for i in sys_conf.mconfig['vrecord']['vtype']:
 
 class record_han():
 	def __init__(self):
-		self.gi = GeoIP.new(GeoIP.GEOIP_MEMORY_CACHE)
+		self.version='test'
 
 	def visit(self,ip_addr,v_string):
 		if v_string in sys_conf.mconfig['vrecord']['vtype']:
@@ -53,7 +53,7 @@ class record_han():
 		if t_sql.count():
 			return t_sql[0]
 		else:
-			return Ip.create(addr=ip_addr,country=self.gi.country_code_by_name(ip_addr))
+			return Ip.create(addr=ip_addr,country='test')
 
 	def info(self,v_string,date_f='month'):
 		dates,visits = [],[]
