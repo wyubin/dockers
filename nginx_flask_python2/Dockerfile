@@ -11,7 +11,7 @@ RUN pip install -U \
   ## for geoip
   #GeoIP \
   ## other package
-  flask uwsgi peewee==2.10.2 validate_email biopython==1.76 numpy==1.16.1
+  flask uwsgi peewee==2.10.2 validate_email biopython==1.76 numpy==1.16.1 plyvel
 
 ## copy src
 COPY settings /settings
